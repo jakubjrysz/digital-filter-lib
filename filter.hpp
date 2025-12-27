@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -15,5 +17,5 @@ public:
     ) = 0;
 
     virtual void reset() = 0;
-    virtual size_t order() const = 0;
+    virtual size_t getOrder() const = 0;
 };
