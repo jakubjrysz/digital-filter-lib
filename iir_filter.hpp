@@ -3,30 +3,31 @@
 #include <vector>
 #include "filter.hpp"
 
-class IIRFilter : public Filter {
-public:
-    // b – współczynniki licznika
-    // a – współczynniki mianownika (a[0] MUSI być = 1)
-    IIRFilter(
-        const std::vector<float>& bCoeffs,
-        const std::vector<float>& aCoeffs
-    );
+namespace jr {
 
-    float processSample(float x) override;
+    class IIRFilter : public Filter {
+        public:
 
-    void process(
-        const float* input,
-        float* output,
-        size_t length
-    ) override;
+            IIRFilter(const std::vector<float>& bCoeffs, const std::vector<float>& aCoeffs);
 
-    void reset() override;
-    size_t order() const override;
+            float processSample(float x) override;
 
-private:
-    std::vector<float> b;   // licznik
-    std::vector<float> a;   // mianownik
+            void process(const float* input, float* output, size_t length) override;
+            
+            void setCoefficients(const std::vector<float>& bCoeffs, const std::vector<float>& aCoeffs);
+            
+            void reset() override;
+            
+            std::vector <std::vector<float>> getCoeffs() override;
+            
+            size_t getOrder() const override;
 
-    std::vector<float> x;   // historia wejścia
-    std::vector<float> y;   // historia wyjścia
-};
+        private:
+            std::vector<float> b;
+            std::vector<float> a;
+            
+            std::vector<float> x;
+            std::vector<float> y;
+    };
+
+}

@@ -14,13 +14,12 @@ int main()
     const size_t order = 64;
     const size_t N = 256;
 
-    // FIR Low-pass
-    FIRFilter fir(
-        FIRType::Lowpass,
+    jr::FIRFilter fir(
+        jr::FIRType::Lowpass,
         fs,
         cutoff,
         order,
-        WindowType::Hann
+        jr::WindowType::Hann
     );
 
     std::vector<float> input(N);
