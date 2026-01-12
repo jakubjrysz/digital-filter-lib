@@ -87,4 +87,13 @@ namespace jr {
         y.assign(a.size(), 0.0f);
     }
 
+    bool IIRFilter::operator==(const IIRFilter& other) const {
+        return (b == other.b) &&
+            (a == other.a);
+    }
+
+    bool IIRFilter::operator!=(const IIRFilter& other) const {
+        return !(*this == other);
+    }
+
 }

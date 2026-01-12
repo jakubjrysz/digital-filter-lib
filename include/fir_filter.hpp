@@ -110,6 +110,9 @@ namespace jr {
          * @return Sampling frequency in Hz.
          */
         float getFs();
+        
+        bool operator==(const FIRFilter& other) const;
+        bool operator!=(const FIRFilter& other) const;
 
     private:
         std::vector<float> b;  ///< Filter coefficients

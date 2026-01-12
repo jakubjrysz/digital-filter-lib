@@ -67,6 +67,9 @@ namespace jr {
          */
         size_t getOrder() const override;
 
+        bool operator==(const IIRFilter& other) const;
+        bool operator!=(const IIRFilter& other) const;
+
     private:
         std::vector<float> b;  ///< Numerator (feedforward) coefficients
         std::vector<float> a;  ///< Denominator (feedback) coefficients
