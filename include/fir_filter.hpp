@@ -48,6 +48,11 @@ namespace jr {
         );
 
         /**
+         * @brief Default constructor for FIR filter.
+         */
+        FIRFilter();
+
+        /**
          * @brief Constructor for band-pass or band-stop FIR filter.
          *
          * @param type FIRType::Bandpass or FIRType::Bandstop.
@@ -112,4 +117,4 @@ namespace jr {
         float fs;              ///< Sampling frequency
     };
 
-} // namespace jr
+}

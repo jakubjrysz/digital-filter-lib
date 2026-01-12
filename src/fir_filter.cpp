@@ -5,6 +5,8 @@
 
 namespace jr {
 
+    FIRFilter::FIRFilter() : b(1, 1.0f), x(1, 0.0f), fs(0.0f){}
+    
     FIRFilter::FIRFilter(
         FIRType type,
         float fs,

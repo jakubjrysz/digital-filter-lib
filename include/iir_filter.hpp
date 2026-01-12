@@ -12,6 +12,10 @@ namespace jr {
      */
     class IIRFilter : public Filter {
     public:
+        /**
+         * @brief Default IIR constructor, b = 1; a = 1.
+         */
+        IIRFilter();
 
         /**
          * @brief Constructor with given filter coefficients.
@@ -70,4 +74,4 @@ namespace jr {
         std::vector<float> y;  ///< Output delay line
     };
 
-} // namespace jr
+}

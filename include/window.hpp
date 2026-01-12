@@ -30,4 +30,4 @@ namespace jr {
      */
     std::vector<float> createWindow(WindowType type, size_t N);
 
-} // namespace jr
+}

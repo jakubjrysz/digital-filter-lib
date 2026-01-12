@@ -6,6 +6,7 @@
 #include <stdexcept>
 
 namespace jr {
+    IIRFilter::IIRFilter() : b{1.0f}, a{1.0f}, x(1, 0.0f), y(1, 0.0f){}
 
     IIRFilter::IIRFilter(const std::vector<float>& bCoeffs, const std::vector<float>& aCoeffs)
         : b(bCoeffs),

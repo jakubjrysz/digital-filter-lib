@@ -56,4 +56,4 @@ namespace jr {
         virtual size_t getOrder() const = 0;
     };
 
-} // namespace jr
+}

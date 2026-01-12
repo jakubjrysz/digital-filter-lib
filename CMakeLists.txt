@@ -15,4 +15,4 @@ set(SOURCES
     src/window.cpp
 )
 
-add_executable(test_filters ${SOURCES})
+add_executable(main_example ${SOURCES})
