@@ -53,6 +53,7 @@ git clone <repository_url>
 cd <repository_name>
 mkdir build
 cd build
+cmake ..
 make
 ./test_filters
 ```
