@@ -25,6 +25,7 @@ The project is designed with **real-time audio processing** in mind:
 ---
 
 ## Project Structure
+```bash
 ├── CMakeLists.txt
 ├── README.md
 ├── main_example.ods
@@ -39,7 +40,7 @@ The project is designed with **real-time audio processing** in mind:
 │ ├── iir_filter.cpp
 │ ├── window.cpp
 │ └── main.cpp
-
+```
 ## Requirements
 
 - Linux (tested on GCC)
@@ -54,3 +55,4 @@ mkdir build
 cd build
 make
 ./test_filters
+```
